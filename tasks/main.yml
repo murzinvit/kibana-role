@@ -4,7 +4,7 @@
         src: "kibana-{{ kibana_version }}-linux-x86_64.tar.gz"
         dest: "/tmp/kibana-{{ kibana_version }}-linux-x86_64.tar.gz"
         mode: 0755
-      register: download_kibana
+      register: upload_kibana
       until: upload_kibana is succeeded
       tags: upkibana
     - name: Ensure installation dir exists
