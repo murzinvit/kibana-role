@@ -22,3 +22,8 @@
         extra_opts: [--strip-components=1]
         creates: "{{ kibana_home }}/bin"
       tags: unkibana
+    - name: install java for ubuntu only
+      when: ansible_os_family == "Debian"
+      package:
+         name: default-jre
+         state: present
