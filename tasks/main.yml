@@ -54,5 +54,5 @@
     - name: Start Kibana 
       become_user: kibana
       become_method: su
-      shell: "{{ kibana_home }}/bin/kibana start -Q &"
+      shell: "{{ kibana_home }}/bin/kibana -Q &"
 
